@@ -1,3 +1,4 @@
+import 'package:audio_player/forget_pass.dart';
 import 'package:audio_player/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,6 +13,44 @@ class LoginPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(
+            bottom: TabBar(tabs: [
+          Tab(
+            child: IconButton(
+              onPressed: () { Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) {
+              return SignupPage();
+            }));},
+              icon: Icon(Icons.person)
+              
+                          ),
+          ) ,
+
+
+          Tab(
+            child: IconButton(
+              onPressed: () { Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) {
+              return LoginPage();
+            }));},
+              icon: Icon(Icons.login)
+              
+                          ),
+          ) ,
+            Tab(
+            child: IconButton(
+              onPressed: () { Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) {
+              return ForgetpassPage();
+            }));},
+              icon: Icon(Icons.edit)
+              
+                          ),
+          )
+
+
+
+
+        ])),
+
+
         body: Container(
           margin: const EdgeInsets.all(24),
           child: Column(

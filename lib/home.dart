@@ -7,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:http/http.dart';
 
-
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
   int current_page = 0;
@@ -18,13 +17,21 @@ class Home extends StatelessWidget {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTIZccfNPnqalhrWev-Xo7uBhkor57_rKbkw&usqp=CAU",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTIZccfNPnqalhrWev-Xo7uBhkor57_rKbkw&usqp=CAU"
   ];
+  // final m = [
+  //   "a",
+  //   "d",
+  //   "dd"
+  // ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
-        title: Text("Home"),
-      ),
+        title:const Text("Home"),
+    
+      
+      ), 
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -54,10 +61,12 @@ class Home extends StatelessWidget {
             itemBuilder: (BuildContext context, int index, int realIndex) {
               final uri_of_images = images[index];
               return Container(
-
-                margin: EdgeInsets.all(10),
-                child: Image.network(uri_of_images));
-              
+                  margin: EdgeInsets.all(10),
+                  //child : Text(uri_of_images)
+                   child: Image.network(uri_of_images)
+                  
+                  
+                  );
             },
             itemCount: images.length,
             // items: images.map((i) {
