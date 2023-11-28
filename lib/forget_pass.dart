@@ -20,37 +20,26 @@ class ForgetpassPage extends StatelessWidget {
                 const SizedBox(height: 60.0),
                 Column(
                   children: <Widget>[
-                  TextField(
+         const Text("your account and we will email you a link to reset your password "),                  
+
+                   TextField(
                       decoration: InputDecoration(
-                        hintText: "Password",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(18),
-                            borderSide: BorderSide.none),
-                        fillColor: Colors.purple.withOpacity(0.1),
-                        filled: true,
-                        prefixIcon: const Icon(Icons.password),
-                      ),
-                      obscureText: true,
+                          hintText: "Email",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(18),
+                              borderSide: BorderSide.none),
+                          fillColor: Colors.purple.withOpacity(0.1),
+                          filled: true,
+                          prefixIcon: const Icon(Icons.email)),
                     ),
                     const SizedBox(height: 20),
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: "Confirm Password",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(18),
-                            borderSide: BorderSide.none),
-                        fillColor: Colors.purple.withOpacity(0.1),
-                        filled: true,
-                        prefixIcon: const Icon(Icons.password),
-                      ),
-                      obscureText: true,
-                    ),
+                  
                   ],
                 ),
                 ElevatedButton(
                   onPressed: () {},
-                  child:  Text(
-                    "confirm",
+                  child:   Text(
+                    "Send",
                     style: TextStyle(fontSize: 20),
                   ),
                   style: ElevatedButton.styleFrom(
